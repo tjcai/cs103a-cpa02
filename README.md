@@ -61,3 +61,8 @@ nodemon app.js
 to start service
 
 open web browser and enter localhost:5000 to visit website
+
+
+3. Link to zoom demonstrating
+
+https://brandeis.zoom.us/rec/share/8wtMOeCZ1Fwe0Lwl3zmn0gzB4XLRPOmr61cycDmNIvyYSRfWThf3d725fjX6g261.OAoNBzftSZsJ7b6w
