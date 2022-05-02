@@ -1,0 +1,71 @@
+<div class="bg-light m-5 p-2 border border-primary border-2">
+    <div class="">
+        <span>
+            <%= drama.name %> 
+        </span>
+        <br>
+        <div>
+            <ul>
+                <li>Rating: <strong><%= drama.ratings %></strong></li>
+                <li><strong><%= drama.nb_watchers %></strong> people are also watching this drama</li>
+                <li><strong><%= drama.nb_ratings %></strong> have rated this drama</li>
+                <li><strong><%= drama.nb_reviews %></strong> have left their reviews</li>
+                <li>Platforms:
+                    <% for (p of drama.streamed_on) { %>
+                        &nbsp;<%= p %>
+                    <% } %>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <div>
+            <p><%= drama.synopsis %></p>
+        </div>
+        <hr>
+        <div>
+            <p>Genres:
+            <% for (g of drama.genres) { %>
+                &nbsp;<%= g %>
+            <% } %>
+            </p>
+        </div>
+
+        <div>
+            <p>Tags:
+            <% for (t of drama.tags) { %>
+                &nbsp;<%= t %>
+            <% } %>
+            </p>
+        </div>
+
+        <div>
+            <p>Main roles:
+            <% for (m of drama.main_roles) { %>
+                &nbsp;<%= m %>
+            <% } %>
+            </p>
+        </div>
+
+        <div>
+            <p>Directors:
+            <% for (d of drama.director) { %>
+                &nbsp;<%= d %>
+            <% } %>
+            </p>
+        </div>
+
+        <div>
+            <p>Screen writer:
+            <% for (s of drama.screenwriter) { %>
+                &nbsp;<%= s %>
+            <% } %>
+            </p>
+        </div>
+        
+    </div>
+    <div>
+        <a href="/addFavorite/<%= drama._id %>">
+            <button type="button" class="btn btn-outline-warning">Add to favorites</button>
+        </a>
+    </div>
+</div>

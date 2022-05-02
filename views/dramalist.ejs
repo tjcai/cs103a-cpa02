@@ -1,0 +1,33 @@
+<hr>
+<% if (region == null ) { %>
+    <h3>Drama in category: <strong><%= genre %></strong></h3>
+<% } else { %>
+    <h3>Drama from: <strong><%= region %></strong></h3>
+<% } %>
+<hr>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Ratings</th>
+            <th>Name</th>
+            <th>Genres</th>
+            <th>Tags</th>
+            <th>Streamed on</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% for (d of drama) { %>
+      <tr class="mb-2"> 
+        <td><%= d.popularity_rank %></td>
+        <td><strong><%= d.ratings %></strong></td>
+        <td>
+            <a href="/drama/byRegion/<%= d._id %>"><%= d.name %></a>
+        </td>
+        <td><%= d.genres %></td>
+        <td><%= d.tags %></td>
+        <td><%= d.streamed_on %></td>
+    </tr>
+    <% } %>
+    </tbody>
+</table>

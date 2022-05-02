@@ -1,0 +1,40 @@
+<br>
+<h2>Favorite list:</h2>
+
+<div class="d-flex flex-wrap overflow-scroll">
+    <br>
+    <% for (f of favorites) { %>
+        <div class="p-3 m-3 border border-primary bg-light w-25">
+            <a href="/favorite/remove/<%= f._id %>">X</a>
+            <span>
+                <a href="/drama/<%= f._id %>"><strong><%= f.name %></strong></a>
+                <%= f.region_origin %>
+            </span>
+            <hr>
+            <div class="mb-1">
+                <p>Rating: <%= f.ratings %></p>
+                <p>Ranking: <%= f.popularity_rank %></p>
+                <p>Episodes: <%= f.nb_episodes %></p>
+                <p>Duration of each episode: <%= f.duration_in_minutes %> minutes</p>
+                <hr>
+            </div>
+            <div class="mb-1">
+               <p>Genres: 
+                <% for (_ of f.genres) { %>
+                &nbsp;<%= _ %>
+                <% }  %>
+               </p>
+               <p>Tags: 
+                <% for (_ of f.tags) { %>
+                &nbsp;<%= _ %>
+                <% }  %>
+               </p>
+               <p>Streamed platforms: 
+                <% for (_ of f.streamed_on) { %>
+                &nbsp;<%= _ %>
+                <% }  %>
+               </p>
+            </div>
+        </div>
+    <% } %>
+</div>

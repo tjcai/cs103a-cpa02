@@ -1,0 +1,60 @@
+
+
+    <div class="jumbotron">
+        <h1>Top 5000 drama search</h1>
+        <p></p>
+    </div>
+    
+    <% if (true || loggedIn) {%>  
+        <form method="post" action="/drama/byGenre">
+            Search by genre: 
+            <input type="text" name="genre" 
+                   placeholder="e.g. Mystery">
+            <input type="submit">
+            <br>
+        </form>
+        <br>
+
+        <form method="post" action="/drama/byRegion">
+            Search by region: 
+            <input type="text" name="region" 
+                   placeholder="e.g. Japan">
+            <input type="submit">
+            <br>
+        </form>
+        <br>
+
+        <!-- This demonstrates all regions -->
+        <p>
+            <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRegion" aria-expanded="false" aria-controls="collapseRegion">
+              See all regions
+            </button>
+        </p>
+          <div class="collapse" id="collapseRegion">
+            <div class="card card-body">
+                <ul>
+                    <% for (r of region) { %>
+                        <li><%= r %></li>
+                    <% } %>
+                </ul>
+            </div>
+          </div>
+
+        <!-- This demonstrates all genres -->
+        <p>
+            <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGenres" aria-expanded="false" aria-controls="collapseGenres">
+              See all genres
+            </button>
+        </p>
+          <div class="collapse" id="collapseGenres">
+            <div class="card card-body">
+                <ul>
+                    <% for (g of genres) { %>
+                        <li><%= g %></li>
+                    <% } %>
+                </ul>
+            </div>
+          </div>
+    <% } %>
+
+
