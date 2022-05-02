@@ -47,11 +47,17 @@ The process is similar to that described in search by category.
 ![login](https://github.com/tjcai/cs103a-cpa02/blob/main/README-PICs/login_signup.png?raw=true)
 
 2.1 How to install my app and have it run locally
+```
+cd cs103a-cpa02
+```
+into the folder of project
+```
+npm install
+```
+to install all required packages 
+```
+nodemon app.js
+```
+to start service
 
-cd into the folder of project
-
-npm install to install all required packages 
-
-nodemon app.js to start service
-
-localhost:5000 to visit website
+open web browser and enter localhost:5000 to visit website
