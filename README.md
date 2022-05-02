@@ -42,3 +42,7 @@ After clikcing Add to favorites button in the left-most, then this drama would b
 
 The process is similar to that described in search by category.
 
+1.2.3 Login Page
+
+![login](https://github.com/tjcai/cs103a-cpa02/blob/main/README-PICs/login_signup.png?raw=true)
+
