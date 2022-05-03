@@ -1,6 +1,5 @@
 # cs103a-cpa02
 CPA02 for COSI 103A, Spring 2022
-![Image text]
 
 1. Description of what my app does and how to use it.
 
